@@ -18,13 +18,8 @@ namespace FlightApp
             InitializeComponent();
         }
 
-        int planeX = 39, planeY = 510;
-        int obstical1_X = 248, obstical1_Y = 233;
-        int obstical2_X = 456, obstical2_Y = 418;
-        int obstical3_X = 838, obstical3_Y = 339;
-        int obstical4_X = 634, obstical4_Y = 91;
-        //Thread myStart = new Thread();
-
+        //int planeX = 39, planeY = 510;
+        int planeX = 130, planeY = 393;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -61,25 +56,93 @@ namespace FlightApp
         {
             //x 39 ; y 510
             //ob1x 248 ; ob1y 418
-            
 
-            while (planeX < label3.Location.X)
+            //while (planeX < label2.Location.X - 50)
+            //{
+            //    planeX++;
+            //    Thread.Sleep(10);
+            //    label1.SetBounds(planeX, planeY, 1, 1);
+            //    while (planeY > label2.Location.Y - 20)
+            //    {
+            //        planeY--;
+            //        Thread.Sleep(10);
+            //        label1.SetBounds(planeX, planeY, 1, 1);
+            //    }
+
+            //}
+
+
+            do
             {
-                planeX++;
-                Thread.Sleep(10);
-                label1.SetBounds(planeX, planeY, 1, 1);
-                while (planeY > label3.Location.Y)
+
+                if (planeX < label7.Location.X )
                 {
-                    planeY--;
-                    Thread.Sleep(10);
                     label1.SetBounds(planeX, planeY, 1, 1);
+                    planeX++;
+                    
+                    Thread.Sleep(10);
+
+                    if (planeY > label7.Location.Y )
+                    {
+                        planeY--;
+                        Thread.Sleep(10);
+                        label1.SetBounds(planeX, planeY, 1, 1);
+                    }
                 }
 
-            }
+                while (planeX < label2.Location.X - 50)
+                {
+                    planeX++;
+                    Thread.Sleep(10);
+                    label1.SetBounds(planeX, planeY, 1, 1);
+                    while (planeY > label2.Location.Y - 10)
+                    {
+                        planeY--;
+                        Thread.Sleep(10);
+                        label1.SetBounds(planeX, planeY, 1, 1);
+                    }
 
-            
-            
+                }
 
+
+
+                while (planeX < label3.Location.X - 5)
+                {
+                    planeX++;
+                    Thread.Sleep(10);
+                    label1.SetBounds(planeX, planeY, 1, 1);
+                    while (planeY > label3.Location.Y - 25)
+                    {
+                        planeY--;
+                        Thread.Sleep(10);
+                        label1.SetBounds(planeX, planeY, 1, 1);
+                    }
+
+                }
+
+                while (planeX < label5.Location.X - 50)
+                {
+                    planeX++;
+                    Thread.Sleep(10);
+                    label1.SetBounds(planeX, planeY, 1, 1);
+                    while (planeY > label5.Location.Y - 20)
+                    {
+                        planeY--;
+                        Thread.Sleep(10);
+                        label1.SetBounds(planeX, planeY, 1, 1);
+                    }
+
+                }
+
+
+                //x=729
+                //y=42
+                //x39
+                //y510
+
+            } while (planeX != label7.Location.X && planeY != label7.Location.Y );
+
+            //MessageBox.Show("Flight landed safelty.");
 
         }
     }
