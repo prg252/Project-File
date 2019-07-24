@@ -1,0 +1,10 @@
+C:\Users\humble\Desktop\FlightApp\FlightApp\bin\Debug\FlightApp.exe.config
+C:\Users\Jackson Mamogobo\Documents\Huub\Project-File\FlightApp\FlightApp\bin\Debug\FlightApp.exe.config
+C:\Users\Jackson Mamogobo\Documents\Huub\Project-File\FlightApp\FlightApp\bin\Debug\FlightApp.exe
+C:\Users\Jackson Mamogobo\Documents\Huub\Project-File\FlightApp\FlightApp\bin\Debug\FlightApp.pdb
+C:\Users\Jackson Mamogobo\Documents\Huub\Project-File\FlightApp\FlightApp\obj\Debug\FlightApp.csprojAssemblyReference.cache
+C:\Users\Jackson Mamogobo\Documents\Huub\Project-File\FlightApp\FlightApp\obj\Debug\FlightApp.Form1.resources
+C:\Users\Jackson Mamogobo\Documents\Huub\Project-File\FlightApp\FlightApp\obj\Debug\FlightApp.csproj.GenerateResource.cache
+C:\Users\Jackson Mamogobo\Documents\Huub\Project-File\FlightApp\FlightApp\obj\Debug\FlightApp.csproj.CoreCompileInputs.cache
+C:\Users\Jackson Mamogobo\Documents\Huub\Project-File\FlightApp\FlightApp\obj\Debug\FlightApp.exe
+C:\Users\Jackson Mamogobo\Documents\Huub\Project-File\FlightApp\FlightApp\obj\Debug\FlightApp.pdb
