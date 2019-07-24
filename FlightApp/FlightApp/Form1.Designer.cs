@@ -38,12 +38,6 @@
             this.lblEnd = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Label();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.progressFuel = new System.Windows.Forms.ProgressBar();
-            this.progressTravel = new System.Windows.Forms.ProgressBar();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.choosePlaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boeing737ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +45,13 @@
             this.challengerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boeing747ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.airBusA335ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.progressTravel = new System.Windows.Forms.ProgressBar();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pnlfuel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +64,7 @@
             this.lblPlane.Location = new System.Drawing.Point(130, 393);
             this.lblPlane.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPlane.Name = "lblPlane";
-            this.lblPlane.Size = new System.Drawing.Size(45, 18);
+            this.lblPlane.Size = new System.Drawing.Size(58, 24);
             this.lblPlane.TabIndex = 0;
             this.lblPlane.Text = "Plane";
             // 
@@ -75,7 +76,7 @@
             this.lblObsticale1.Location = new System.Drawing.Point(306, 246);
             this.lblObsticale1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblObsticale1.Name = "lblObsticale1";
-            this.lblObsticale1.Size = new System.Drawing.Size(82, 18);
+            this.lblObsticale1.Size = new System.Drawing.Size(103, 24);
             this.lblObsticale1.TabIndex = 1;
             this.lblObsticale1.Text = "Obsticale 1";
             // 
@@ -87,7 +88,7 @@
             this.lblObsticale2.Location = new System.Drawing.Point(419, 190);
             this.lblObsticale2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblObsticale2.Name = "lblObsticale2";
-            this.lblObsticale2.Size = new System.Drawing.Size(82, 18);
+            this.lblObsticale2.Size = new System.Drawing.Size(103, 24);
             this.lblObsticale2.TabIndex = 2;
             this.lblObsticale2.Text = "Obsticale 2";
             // 
@@ -99,7 +100,7 @@
             this.lblObsticale3.Location = new System.Drawing.Point(183, 139);
             this.lblObsticale3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblObsticale3.Name = "lblObsticale3";
-            this.lblObsticale3.Size = new System.Drawing.Size(82, 18);
+            this.lblObsticale3.Size = new System.Drawing.Size(103, 24);
             this.lblObsticale3.TabIndex = 3;
             this.lblObsticale3.Text = "Obsticale 3";
             // 
@@ -111,7 +112,7 @@
             this.lblObsticale4.Location = new System.Drawing.Point(373, 102);
             this.lblObsticale4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblObsticale4.Name = "lblObsticale4";
-            this.lblObsticale4.Size = new System.Drawing.Size(82, 18);
+            this.lblObsticale4.Size = new System.Drawing.Size(103, 24);
             this.lblObsticale4.TabIndex = 4;
             this.lblObsticale4.Text = "Obsticale 4";
             // 
@@ -123,9 +124,9 @@
             // 
             this.lblEnd.AutoSize = true;
             this.lblEnd.BackColor = System.Drawing.Color.GreenYellow;
-            this.lblEnd.Location = new System.Drawing.Point(729, 42);
+            this.lblEnd.Location = new System.Drawing.Point(499, 46);
             this.lblEnd.Name = "lblEnd";
-            this.lblEnd.Size = new System.Drawing.Size(117, 18);
+            this.lblEnd.Size = new System.Drawing.Size(148, 24);
             this.lblEnd.TabIndex = 6;
             this.lblEnd.Text = "End of Obsticale";
             // 
@@ -147,10 +148,68 @@
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(978, 10);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(19, 18);
+            this.btnExit.Size = new System.Drawing.Size(25, 24);
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "X";
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.choosePlaneToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1009, 28);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // choosePlaneToolStripMenuItem
+            // 
+            this.choosePlaneToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.boeing737ToolStripMenuItem,
+            this.boeing891ToolStripMenuItem,
+            this.challengerToolStripMenuItem,
+            this.boeing747ToolStripMenuItem,
+            this.airBusA335ToolStripMenuItem});
+            this.choosePlaneToolStripMenuItem.Name = "choosePlaneToolStripMenuItem";
+            this.choosePlaneToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
+            this.choosePlaneToolStripMenuItem.Text = "Choose Plane";
+            // 
+            // boeing737ToolStripMenuItem
+            // 
+            this.boeing737ToolStripMenuItem.Name = "boeing737ToolStripMenuItem";
+            this.boeing737ToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.boeing737ToolStripMenuItem.Text = "Boeing737";
+            this.boeing737ToolStripMenuItem.Click += new System.EventHandler(this.Boeing737ToolStripMenuItem_Click);
+            // 
+            // boeing891ToolStripMenuItem
+            // 
+            this.boeing891ToolStripMenuItem.Name = "boeing891ToolStripMenuItem";
+            this.boeing891ToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.boeing891ToolStripMenuItem.Text = "Boeing891";
+            this.boeing891ToolStripMenuItem.Click += new System.EventHandler(this.Boeing891ToolStripMenuItem_Click);
+            // 
+            // challengerToolStripMenuItem
+            // 
+            this.challengerToolStripMenuItem.Name = "challengerToolStripMenuItem";
+            this.challengerToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.challengerToolStripMenuItem.Text = "Challenger";
+            this.challengerToolStripMenuItem.Click += new System.EventHandler(this.ChallengerToolStripMenuItem_Click);
+            // 
+            // boeing747ToolStripMenuItem
+            // 
+            this.boeing747ToolStripMenuItem.Name = "boeing747ToolStripMenuItem";
+            this.boeing747ToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.boeing747ToolStripMenuItem.Text = "Boeing747";
+            this.boeing747ToolStripMenuItem.Click += new System.EventHandler(this.Boeing747ToolStripMenuItem_Click);
+            // 
+            // airBusA335ToolStripMenuItem
+            // 
+            this.airBusA335ToolStripMenuItem.Name = "airBusA335ToolStripMenuItem";
+            this.airBusA335ToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.airBusA335ToolStripMenuItem.Text = "AirBus A335";
+            this.airBusA335ToolStripMenuItem.Click += new System.EventHandler(this.AirBusA335ToolStripMenuItem_Click);
             // 
             // btnStart
             // 
@@ -173,13 +232,6 @@
             this.button1.Text = "Check Results";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // progressFuel
-            // 
-            this.progressFuel.Location = new System.Drawing.Point(376, 435);
-            this.progressFuel.Name = "progressFuel";
-            this.progressFuel.Size = new System.Drawing.Size(212, 23);
-            this.progressFuel.TabIndex = 11;
-            // 
             // progressTravel
             // 
             this.progressTravel.Location = new System.Drawing.Point(376, 464);
@@ -191,9 +243,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(330, 440);
+            this.label6.Location = new System.Drawing.Point(330, 429);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 18);
+            this.label6.Size = new System.Drawing.Size(53, 24);
             this.label6.TabIndex = 13;
             this.label6.Text = "Fuel:";
             // 
@@ -203,86 +255,46 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(297, 464);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 18);
+            this.label8.Size = new System.Drawing.Size(90, 24);
             this.label8.TabIndex = 14;
             this.label8.Text = "Progress:";
             // 
-            // menuStrip1
+            // pnlfuel
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.choosePlaneToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1009, 24);
-            this.menuStrip1.TabIndex = 9;
-            this.menuStrip1.Text = "menuStrip1";
+            this.pnlfuel.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.pnlfuel.Location = new System.Drawing.Point(377, 429);
+            this.pnlfuel.Name = "pnlfuel";
+            this.pnlfuel.Size = new System.Drawing.Size(211, 23);
+            this.pnlfuel.TabIndex = 15;
             // 
-            // choosePlaneToolStripMenuItem
+            // panel2
             // 
-            this.choosePlaneToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.boeing737ToolStripMenuItem,
-            this.boeing891ToolStripMenuItem,
-            this.challengerToolStripMenuItem,
-            this.boeing747ToolStripMenuItem,
-            this.airBusA335ToolStripMenuItem});
-            this.choosePlaneToolStripMenuItem.Name = "choosePlaneToolStripMenuItem";
-            this.choosePlaneToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
-            this.choosePlaneToolStripMenuItem.Text = "Choose Plane";
-            // 
-            // boeing737ToolStripMenuItem
-            // 
-            this.boeing737ToolStripMenuItem.Name = "boeing737ToolStripMenuItem";
-            this.boeing737ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.boeing737ToolStripMenuItem.Text = "Boeing737";
-            this.boeing737ToolStripMenuItem.Click += new System.EventHandler(this.Boeing737ToolStripMenuItem_Click);
-            // 
-            // boeing891ToolStripMenuItem
-            // 
-            this.boeing891ToolStripMenuItem.Name = "boeing891ToolStripMenuItem";
-            this.boeing891ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.boeing891ToolStripMenuItem.Text = "Boeing891";
-            this.boeing891ToolStripMenuItem.Click += new System.EventHandler(this.Boeing891ToolStripMenuItem_Click);
-            // 
-            // challengerToolStripMenuItem
-            // 
-            this.challengerToolStripMenuItem.Name = "challengerToolStripMenuItem";
-            this.challengerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.challengerToolStripMenuItem.Text = "Challenger";
-            this.challengerToolStripMenuItem.Click += new System.EventHandler(this.ChallengerToolStripMenuItem_Click);
-            // 
-            // boeing747ToolStripMenuItem
-            // 
-            this.boeing747ToolStripMenuItem.Name = "boeing747ToolStripMenuItem";
-            this.boeing747ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.boeing747ToolStripMenuItem.Text = "Boeing747";
-            this.boeing747ToolStripMenuItem.Click += new System.EventHandler(this.Boeing747ToolStripMenuItem_Click);
-            // 
-            // airBusA335ToolStripMenuItem
-            // 
-            this.airBusA335ToolStripMenuItem.Name = "airBusA335ToolStripMenuItem";
-            this.airBusA335ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.airBusA335ToolStripMenuItem.Text = "AirBus A335";
-            this.airBusA335ToolStripMenuItem.Click += new System.EventHandler(this.AirBusA335ToolStripMenuItem_Click);
+            this.panel2.BackColor = System.Drawing.Color.GreenYellow;
+            this.panel2.Location = new System.Drawing.Point(490, 28);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(170, 71);
+            this.panel2.TabIndex = 16;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.lblPlane);
+            this.Controls.Add(this.lblEnd);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlfuel);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.progressTravel);
-            this.Controls.Add(this.progressFuel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.lblEnd);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblObsticale4);
             this.Controls.Add(this.lblObsticale3);
             this.Controls.Add(this.lblObsticale2);
             this.Controls.Add(this.lblObsticale1);
-            this.Controls.Add(this.lblPlane);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -313,7 +325,6 @@
         private System.Windows.Forms.Label btnExit;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ProgressBar progressFuel;
         private System.Windows.Forms.ProgressBar progressTravel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
@@ -324,5 +335,7 @@
         private System.Windows.Forms.ToolStripMenuItem challengerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem boeing747ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem airBusA335ToolStripMenuItem;
+        private System.Windows.Forms.Panel pnlfuel;
+        private System.Windows.Forms.Panel panel2;
     }
 }

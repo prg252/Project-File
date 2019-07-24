@@ -18,7 +18,6 @@ namespace FlightApp
             InitializeComponent();
         }
 
-        //int planeX = 39, planeY = 510;
         int planeX = 130, planeY = 393;
         BindingSource bs = new BindingSource();
 
@@ -32,6 +31,10 @@ namespace FlightApp
         {
             this.Controls.Clear();
             this.InitializeComponent();
+            Form1 frmrst = new Form1();
+            this.Hide();
+            frmrst.Show();
+
         }
 
        
@@ -71,102 +74,130 @@ namespace FlightApp
             timer1.Start();
         }
 
+        private void Caluculate(int i)
+        {
+            double pow = Math.Pow(i, i);
+        }
+
         private void Timer1_Tick(object sender, EventArgs e)
         {
-           
-            progressFuel.Maximum = lblEnd.Location.X + lblEnd.Location.Y;
-            progressTravel.Minimum = lblPlane.Location.X + lblPlane.Location.Y;
-            progressTravel.Value = lblPlane.Location.X + lblPlane.Location.Y;
+            progressTravel.Maximum = 929;
+            progressTravel.Minimum = 42;
+            progressTravel.Value = 45;
             progressTravel.Step = 1;
+
             //  timer1.Interval = getPlaneSpeed(flight.FlightName1);
-            timer1.Interval = 2000;
-            
-            do
+            //timer1.Interval = 2000;
+
+            int tank = 200;
+            try
             {
-
-                if (planeX < lblEnd.Location.X )
+                do
                 {
-                    lblPlane.SetBounds(planeX, planeY, 1, 1);
-                    planeX++;
-                    progressTravel.Step = 1;
-                    progressTravel.PerformStep();
-                    Thread.Sleep(10);
 
-                    if (planeY > lblEnd.Location.Y )
+                    while (planeX < lblObsticale1.Location.X - 50)
                     {
-                        planeY--;
+                        planeX++;
                         progressTravel.Step = 1;
                         progressTravel.PerformStep();
                         Thread.Sleep(10);
                         lblPlane.SetBounds(planeX, planeY, 1, 1);
-                    }
-                }
 
-                while (planeX < lblObsticale1.Location.X - 50)
-                {
-                    planeX++;
+                        while (planeY > lblObsticale1.Location.Y - 10)
+                        {
+                            planeY--;
+                            progressTravel.Step = 1;
+                            progressTravel.PerformStep();
+                            Thread.Sleep(10);
+                            lblPlane.SetBounds(planeX, planeY, 1, 1);
+                        }
+
+                    }
+
+                    //200   =  201
+                    if (pnlfuel.Width > tank)
+                    {
+                        pnlfuel.Width = pnlfuel.Width - 75;
+                    }
+
                     progressTravel.Step = 1;
                     progressTravel.PerformStep();
-                    Thread.Sleep(10);
-                    lblPlane.SetBounds(planeX, planeY, 1, 1);
-                    while (planeY > lblObsticale1.Location.Y - 10)
+
+
+                    while (planeX < lblObsticale2.Location.X - 5)
                     {
-                        planeY--;
+                        planeX++;
+                        progressTravel.PerformStep();
+                        progressTravel.Step = 1;
+                        Thread.Sleep(10);
+                        lblPlane.SetBounds(planeX, planeY, 1, 1);
+
+                        while (planeY > lblObsticale2.Location.Y - 25)
+                        {
+                            planeY--;
+                            progressTravel.Step = 1;
+                            progressTravel.PerformStep();
+                            Thread.Sleep(10);
+                            lblPlane.SetBounds(planeX, planeY, 1, 1);
+                        }
+
+                    }
+
+
+                    while (planeX < lblObsticale4.Location.X - 50)
+                    {
+                        planeX++;
                         progressTravel.Step = 1;
                         progressTravel.PerformStep();
                         Thread.Sleep(10);
                         lblPlane.SetBounds(planeX, planeY, 1, 1);
+
+                        while (planeY > lblObsticale4.Location.Y - 20)
+                        {
+                            planeY--;
+                            progressTravel.Step = 1;
+                            progressTravel.PerformStep();
+                            Thread.Sleep(10);
+                            lblPlane.SetBounds(planeX, planeY, 1, 1);
+
+                        }
+
                     }
 
-                }
 
 
-
-                while (planeX < lblObsticale2.Location.X - 5)
-                {
-                    planeX++;
-                    progressTravel.PerformStep();
-                    progressTravel.Step = 1;
-                    Thread.Sleep(10);
-                    lblPlane.SetBounds(planeX, planeY, 1, 1);
-                    while (planeY > lblObsticale2.Location.Y - 25)
+                    if (planeX < lblEnd.Location.X)
                     {
-                        planeY--;
+
+                        planeX++;
                         progressTravel.Step = 1;
                         progressTravel.PerformStep();
                         Thread.Sleep(10);
                         lblPlane.SetBounds(planeX, planeY, 1, 1);
+
+                        if (planeY > lblEnd.Location.Y)
+                        {
+                            planeY--;
+                            progressTravel.Step = 1;
+                            progressTravel.PerformStep();
+                            Thread.Sleep(10);
+                            lblPlane.SetBounds(planeX, planeY, 1, 1);
+
+                        }
+
                     }
 
-                }
+                    pnlfuel.Width = pnlfuel.Width - 2;
 
-                while (planeX < lblObsticale4.Location.X - 50)
-                {
-                    planeX++;
-                    progressTravel.Step = 1;
-                    progressTravel.PerformStep();
-                    Thread.Sleep(10);
-                    lblPlane.SetBounds(planeX, planeY, 1, 1);
-                    while (planeY > lblObsticale4.Location.Y - 20)
-                    {
-                        planeY--;
-                        progressTravel.Step = 1;
-                        progressTravel.PerformStep();
-                        Thread.Sleep(10);
-                        lblPlane.SetBounds(planeX, planeY, 1, 1);
-                    }
+                } while (planeX != lblEnd.Location.X && planeY != lblEnd.Location.Y);
 
-                }
+            }
+            catch (Exception se)
+            {
+                MessageBox.Show(se.Message);
+            }
+            
 
-
-                //x=729
-                //y=42
-                //x39
-                //y510
-
-            } while (planeX != lblEnd.Location.X && planeY != lblEnd.Location.Y );
-
-            //MessageBox.Show("Flight landed safelty.");
 
         }
     }
